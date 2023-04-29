@@ -1,0 +1,9 @@
+.services {
+  padding: var(--main-padding-top) 0;
+  background-color: var(--section-background);
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}/*# sourceMappingURL=Services.css.map */

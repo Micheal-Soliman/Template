@@ -1,0 +1,123 @@
+.features {
+  padding: var(--main-padding-top);
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    .box {
+      text-align: center;
+      &:hover a {
+        background-position: left center;
+        color: white;
+      }
+      &:hover .image::after {
+        border-width: 0 500px 170px 0;
+      }
+      .image {
+        position: relative;
+        overflow: hidden;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          border-style: solid;
+          border-width: 0 0 170px 500px;
+          border-color: transparent transparent white transparent;
+          transition: 0.7s;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+      h2 {
+        position: relative;
+        width: fit-content;
+        text-transform: capitalize;
+        margin: auto;
+        letter-spacing: 2px;
+        font-size: 30px;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 15px;
+          bottom: -10px;
+          height: 5px;
+          background-color: red;
+          width: calc(100% - 30px);
+        }
+      }
+      p {
+        line-height: 1.8;
+        margin: 30px 0;
+        color: #666;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      a {
+        font-size: 20px;
+        border: 2px solid red;
+        padding: 10px 30px;
+        border-radius: 10px;
+        display: block;
+        width: fit-content;
+        margin: 0 auto 30px;
+        transition: 1s;
+      }
+    }
+    .quality {
+      .image::before {
+        background-color: rgba($color: #f44036, $alpha: 0.5);
+      }
+      h2::after {
+        background-color: #f44036;
+      }
+      a {
+        color: #f44036;
+        border-color: #f44036;
+        background: linear-gradient(to right, #f44036 50%, white 50%);
+        background-size: 200%;
+        background-position: right center;
+      }
+    }
+    .time {
+      .image::before {
+        background-color: rgba($color: #009688, $alpha: 0.5);
+      }
+      h2::after {
+        background-color: #009688;
+      }
+      a {
+        color: #009688;
+        border-color: #009688;
+        background: linear-gradient(to right, #009688 50%, white 50%);
+        background-size: 200%;
+        background-position: right center;
+      }
+    }
+    .passion {
+      .image::before {
+        background-color: rgba($color: #03a9f4, $alpha: 0.5);
+      }
+      h2::after {
+        background-color: #03a9f4;
+      }
+      a {
+        color: #03a9f4;
+        border-color: #03a9f4;
+        background: linear-gradient(to right, #03a9f4 50%, white 50%);
+        background-size: 200%;
+        background-position: right center;
+      }
+    }
+  }
+}
