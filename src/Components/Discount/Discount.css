@@ -65,7 +65,7 @@
 .discount .form .content form {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 20px;
 }
 .discount .form .content form input,
 .discount .form .content form textarea {

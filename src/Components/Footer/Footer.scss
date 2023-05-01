@@ -12,7 +12,7 @@
       justify-content: center;
       color: white;
       h3 {
-        font-size: 50px;
+        font-size: 40px;
         margin: 20px 0;
         color: var(--main-color);
         letter-spacing: 3px;
@@ -44,7 +44,7 @@
             }
           }
           svg {
-            font-size: 40px;
+            font-size: 30px;
           }
         }
       }
@@ -74,6 +74,7 @@
             color: #666;
             position: relative;
             transition: 1s;
+            font-size: 14px;
             left: 0;
             &::before {
               content: "\2192";
@@ -91,7 +92,7 @@
           margin: 20px 0;
           svg {
             color: var(--main-color);
-            font-size: 35px;
+            font-size: 25px;
             margin-right: 10px;
           }
           span {
