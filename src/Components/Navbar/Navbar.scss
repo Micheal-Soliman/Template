@@ -17,6 +17,8 @@
       align-items: center;
       font-size: 26px;
       font-weight: bold;
+      animation: colored 4s linear infinite;
+      letter-spacing: 2px;
     }
     ul {
       display: flex;
@@ -121,6 +123,14 @@
           z-index: 100;
         }
       }
+    }
+  }
+  @keyframes colored {
+    0%, 100%{
+      color: black;
+    }
+    50%{
+      color: var(--main-color);
     }
   }
 }

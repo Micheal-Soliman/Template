@@ -19,6 +19,8 @@
   align-items: center;
   font-size: 26px;
   font-weight: bold;
+  animation: colored 4s linear infinite;
+  letter-spacing: 2px;
 }
 .navbar .container ul {
   display: flex;
@@ -127,4 +129,12 @@
   opacity: 1;
   top: calc(100% + 5px);
   z-index: 100;
+}
+@keyframes colored {
+  0%, 100% {
+    color: black;
+  }
+  50% {
+    color: var(--main-color);
+  }
 }/*# sourceMappingURL=Navbar.css.map */

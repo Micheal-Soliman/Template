@@ -16,27 +16,43 @@ function Articles() {
   const articles = [
     {
       img: art1,
+      title: "Title",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed atque aliquid velit, in quod veniam possimus, tenetur adipisci quidem unde laboriosam. Nihil reprehenderit, velit esse sint vel molestiae odit culpa.",
     },
     {
       img: art2,
+      title: "Title",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed atque aliquid velit, in quod veniam possimus, tenetur adipisci quidem unde laboriosam. Nihil reprehenderit, velit esse sint vel molestiae odit culpa.",
     },
     {
       img: art3,
+      title: "Title",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed atque aliquid velit, in quod veniam possimus, tenetur adipisci quidem unde laboriosam. Nihil reprehenderit, velit esse sint vel molestiae odit culpa.",
     },
     {
       img: art4,
+      title: "Title",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed atque aliquid velit, in quod veniam possimus, tenetur adipisci quidem unde laboriosam. Nihil reprehenderit, velit esse sint vel molestiae odit culpa.",
     },
     {
       img: art5,
+      title: "Title",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed atque aliquid velit, in quod veniam possimus, tenetur adipisci quidem unde laboriosam. Nihil reprehenderit, velit esse sint vel molestiae odit culpa.",
     },
     {
       img: art6,
+      title: "Title",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed atque aliquid velit, in quod veniam possimus, tenetur adipisci quidem unde laboriosam. Nihil reprehenderit, velit esse sint vel molestiae odit culpa.",
     },
     {
       img: art7,
+      title: "Title",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed atque aliquid velit, in quod veniam possimus, tenetur adipisci quidem unde laboriosam. Nihil reprehenderit, velit esse sint vel molestiae odit culpa.",
     },
     {
       img: art8,
+      title: "Title",
+      desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed atque aliquid velit, in quod veniam possimus, tenetur adipisci quidem unde laboriosam. Nihil reprehenderit, velit esse sint vel molestiae odit culpa.",
     },
   ];
 
@@ -49,13 +65,8 @@ function Articles() {
             <div className="box">
               <img src={article.img} alt="article" />
               <div className="content">
-                <h3>Title</h3>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
-                  in reiciendis natus, eveniet sapiente voluptate deserunt?
-                  Voluptates consequuntur, esse atque nesciunt perferendis ex
-                  fuga voluptatum, inventore consequatur quae sunt tenetur!
-                </p>
+                <h3>{article.title}</h3>
+                <p title={article.desc}>{article.desc}</p>
               </div>
               <div className="info">
                 <Link to="#">Read More</Link>

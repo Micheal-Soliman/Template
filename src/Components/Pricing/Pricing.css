@@ -1,0 +1,122 @@
+@charset "UTF-8";
+.pricing {
+  background-color: var(--section-background);
+  padding: var(--main-padding-top);
+}
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.pricing .container .popular {
+  transform: translateY(-20px);
+}
+.pricing .container .box {
+  position: relative;
+  background-color: white;
+  text-align: center;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.pricing .container .box .label {
+  position: absolute;
+  writing-mode: vertical-lr;
+  right: 15px;
+  background: var(--main-color);
+  padding: 20px 20px 40px 20px;
+  width: 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pricing .container .box .label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 20px;
+  border-color: transparent transparent white transparent;
+  transition: 0.7s;
+}
+.pricing .container .box::before, .pricing .container .box::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 50%;
+  background-color: #f6f6f6;
+  transition: 0.7s;
+}
+.pricing .container .box::before {
+  right: 0;
+  top: 0;
+}
+.pricing .container .box::after {
+  left: 0;
+  bottom: 0;
+}
+.pricing .container .box:hover::before, .pricing .container .box:hover::after {
+  width: 100%;
+}
+.pricing .container .box:hover .label::before {
+  border-color: transparent transparent #f6f6f6 transparent;
+}
+.pricing .container .box h3 {
+  font-size: 20px;
+  margin: 30px 0;
+  letter-spacing: 2px;
+}
+.pricing .container .box img {
+  width: 100px;
+}
+.pricing .container .box .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.pricing .container .box .price span:first-child {
+  font-size: 40px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.pricing .container .box .price span:last-child {
+  color: #666;
+  font-size: 16;
+}
+.pricing .container .box ul {
+  text-align: left;
+}
+.pricing .container .box ul li {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+.pricing .container .box ul li::before {
+  content: "✓";
+  margin-right: 10px;
+  font-weight: 900;
+  color: var(--main-color);
+  font-size: 20px;
+}
+.pricing .container .box a {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid var(--main-color);
+  padding: 10px 20px;
+  font-size: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  color: var(--main-color);
+  transition: 0.5s;
+}
+.pricing .container .box a:hover {
+  color: white;
+  background-color: var(--main-color-alt);
+  border: 2px solid var(--main-color-alt);
+}/*# sourceMappingURL=Pricing.css.map */

@@ -6,4 +6,76 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
+}
+.services .container .box {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  counter-increment: services;
+  transition: 1s;
+}
+.services .container .box::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -3px;
+  height: 3px;
+  width: 0;
+  background-color: var(--main-color);
+  transition: 1s;
+}
+.services .container .box:hover {
+  transform: translateY(-20px);
+}
+.services .container .box:hover::before {
+  width: 100%;
+}
+.services .container .box svg {
+  color: #d5d5d5;
+  font-size: 65px;
+  display: block;
+  margin: 30px auto;
+}
+.services .container .box h3 {
+  text-align: center;
+  color: var(--main-color);
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.services .container .box .info {
+  padding: 20px;
+  background-color: #f9f9f9;
+  text-align: right;
+  position: relative;
+}
+.services .container .box .info::before {
+  content: counter(services);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  padding-right: 30px;
+}
+.services .container .box .info::after {
+  content: "";
+  position: absolute;
+  left: 80px;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #d5d5d5;
+  transform: skewX(-45deg);
+}
+.services .container .box .info a {
+  color: var(--main-color);
 }/*# sourceMappingURL=Services.css.map */

@@ -1,0 +1,42 @@
+.our-skills {
+  padding: var(--main-padding-top) 0;
+  .container {
+    display: flex;
+    align-items: center;
+    img {
+    }
+    .skills {
+      flex: 1;
+      .skill {
+        margin: 20px 0;
+        h3 {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-transform: capitalize;
+          font-size: 20px;
+          font-weight: bold;
+          span {
+            font-size: 14px;
+            color: var(--main-color);
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+          }
+        }
+        .progress {
+            background-color: #eee;
+            height: 30px;
+            position: relative;
+          span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 30px;
+            background-color: var(--main-color);
+          }
+        }
+      }
+    }
+  }
+}

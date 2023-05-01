@@ -1,0 +1,108 @@
+.discount {
+  display: flex;
+  min-height: 100vh;
+}
+.discount .image {
+  background: url("../../assests/discount-background1.jpg");
+  background-size: cover;
+  flex: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1;
+}
+.discount .image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: rgba(23, 135, 224, 0.9);
+  z-index: -1;
+}
+.discount .image .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 50px;
+}
+.discount .image .content h2 {
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.discount .image .content p {
+  max-width: 500px;
+  line-height: 1.6;
+  text-align: center;
+}
+.discount .image .content img {
+  max-width: 100%;
+  width: 300px;
+}
+.discount .form {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.discount .form .content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+}
+.discount .form .content h2 {
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.discount .form .content form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.discount .form .content form input,
+.discount .form .content form textarea {
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 20px;
+  caret-color: var(--main-color);
+}
+.discount .form .content form input:focus,
+.discount .form .content form textarea:focus {
+  outline: none;
+}
+.discount .form .content form textarea {
+  resize: none;
+}
+.discount .form .content form input::-webkit-outer-spin-button,
+.discount .form .content form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.discount .form .content form input[type=number] {
+  -moz-appearance: textfield;
+}
+.discount .form .content form input[type=submit] {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px 80px;
+  color: white;
+  background-color: var(--main-color);
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+  cursor: pointer;
+  transition: 0.7s;
+  letter-spacing: 2px;
+}
+.discount .form .content form input[type=submit]:hover {
+  background-color: var(--main-color-alt);
+}/*# sourceMappingURL=Discount.css.map */

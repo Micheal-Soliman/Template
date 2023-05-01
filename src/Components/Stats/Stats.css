@@ -1,0 +1,76 @@
+.stats {
+  padding: var(--main-padding-top) 0;
+  background-image: url("../../assests//stats.jpg");
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+.stats::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: -1;
+}
+.stats h2 {
+  margin: 0 auto 60px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+.stats .container .box {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  opacity: 0.8;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.stats .container .box:hover {
+  opacity: 1;
+}
+.stats .container .box:hover::before, .stats .container .box:hover::after {
+  height: 100%;
+}
+.stats .container .box::before, .stats .container .box::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  height: 0;
+  width: 2px;
+  transition: 0.7s;
+}
+.stats .container .box::before {
+  right: 0;
+  top: 0;
+}
+.stats .container .box::after {
+  left: 0;
+  bottom: 0;
+}
+.stats .container .box svg {
+  align-self: center;
+  font-size: 30px;
+}
+.stats .container .box .num {
+  font-size: 50px;
+  color: var(--main-color);
+  font-weight: bold;
+  margin: 10px 0;
+}
+.stats .container .box .title {
+  font-style: italic;
+  letter-spacing: 2px;
+  font-weight: bold;
+}/*# sourceMappingURL=Stats.css.map */
