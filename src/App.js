@@ -24,10 +24,7 @@ import Home from './Pages/Home/Home';
 function App() {
   return (
     <div className="App">
-      <Routes>
-        <Route exact path='/Template' element={< Home />}></Route>
-      </Routes>
-
+      <Home />
     </div>
   );
 }
